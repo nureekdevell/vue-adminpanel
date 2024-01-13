@@ -105,7 +105,7 @@
           >
           <router-link
             class="flex items-center transition py-2 px-4 items-center w-full hover:bg-gray-400 active:bg-gray-600 rounded-md"
-            to="/home"
+            to="/profile"
           >
             <svg
               id="address-book_24"
@@ -260,7 +260,7 @@
 
           <router-link
             class="flex items-center transition py-2 px-4 items-center w-full hover:bg-gray-400 active:bg-gray-600 rounded-md"
-            to="/home"
+            to="/messege"
           >
             <svg
               id="message-2_24"
@@ -358,7 +358,7 @@
           >
           <router-link
             class="flex items-center transition py-2 px-4 items-center w-full hover:bg-gray-400 active:bg-gray-600 rounded-md"
-            to="/home"
+            to="/"
           >
             <svg
               id="file-download_24"
@@ -473,7 +473,7 @@
           >
           <router-link
             class="flex items-center transition py-2 px-4 items-center w-full hover:bg-gray-400 active:bg-gray-600 rounded-md"
-            to="/home"
+            to="/settings"
           >
             <svg
               id="file-settings_24"
@@ -1053,16 +1053,45 @@
                 </g>
               </g>
             </svg>
-            <div class="">
+            <div @click="toggleUser" class="">
               <div class="cursor-pointer font-semibold">Nureek</div>
-              <div class="cursor-pointer text-xs">Admin</div>
+              <div class="cursor-pointer relative text-xs">Admin</div>
+            </div>
+            <div v-show="showUser" class="flex bg-gray-700 rounded-md absolute z-20 mt-52">
+              <ul class="mt-6 text-sm text-gray-700">
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Settings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Earnings</a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
 
       <!--      Menu-->
-      <div class="h-[calc(100vh-50px)] text-center">menu</div>
+      <div class="h-[calc(100vh-50px)] p-5 text-center">
+        <div class="border border-gray-400 p-5 rounded-md h-full">
+          <router-view></router-view>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -1071,8 +1100,12 @@
 import { ref } from 'vue'
 
 let showSide = ref(true)
+let showUser = ref(false)
 const toggleSideBar = () => {
   showSide.value = !showSide.value
+}
+const toggleUser = () => {
+  showUser.value = !showUser.value
 }
 </script>
 
