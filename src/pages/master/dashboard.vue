@@ -958,6 +958,17 @@
           </svg>
           <input class="px-4 py-1 pl-8 rounded-md" type="text" placeholder="Search..." />
         </div>
+        <!--        ToggleLocale-->
+        <div>
+          <select
+            id="countries"
+            class="bg-gray-50 border border-gray-300 p-2 text-gray-900 text-sm rounded-lg"
+          >
+            <option selected>EN</option>
+            <option value="RU">RU</option>
+            <option value="UZ">UZ</option>
+          </select>
+        </div>
         <!--        Profile-->
         <div>
           <div class="flex justify-between items-center">
