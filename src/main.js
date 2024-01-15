@@ -5,6 +5,7 @@ import RU from './locale/ru.json'
 import UZ from './locale/uz.json'
 import { createApp } from 'vue'
 import App from './App.vue'
+import { createPinia } from 'pinia'
 import router from './router'
 
 const i18n = createI18n({
@@ -15,5 +16,6 @@ const i18n = createI18n({
     UZ: 'UZ'
   }
 })
+const pinia = createPinia()
 
 createApp(App).use(router).use(i18n).mount('#app')
