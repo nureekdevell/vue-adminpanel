@@ -1,3 +1,8 @@
 {
-  "cart": "cart-EN"
+  "title": "English title",
+  "hello": "Welcome",
+  "containers": "ng-containers are useful when you don't want to have too many html layers",
+  "dashboard": {
+    "description": "You may use scopes for structuring translations"
+  }
 }
