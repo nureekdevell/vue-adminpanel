@@ -1068,6 +1068,7 @@
               <div class="cursor-pointer font-semibold">Nureek</div>
               <div class="cursor-pointer relative text-xs">Admin</div>
             </div>
+            <div v-show="showUser" @click="toggleUser" class="fixed inset-0 z-[999]"></div>
             <div v-show="showUser" class="flex bg-gray-700 rounded-md absolute z-20 mt-52">
               <ul class="mt-6 text-sm text-gray-700">
                 <li>

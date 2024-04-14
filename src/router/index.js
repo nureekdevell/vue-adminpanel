@@ -34,7 +34,7 @@ const routes = [
       {
         name: 'setting',
         path: '/setting',
-        component: setting
+        component: settings
       }
     ]
   }
